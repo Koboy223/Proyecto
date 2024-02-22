@@ -1,0 +1,147 @@
+/* Estilos para el menú de navegación */
+.menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 1px;
+    z-index: 1000;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    flex: 1;
+    transition: background-color 0.5s; /* Transición del color de fondo */
+    border-bottom: 2px solid transparent;
+    padding: 10px;
+}
+
+.menu-item:hover {
+    background-color: #555; /* Cambio de color al hacer hover */
+    border-bottom: 2px solid #fff;
+}
+
+.menu-item img {
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+    margin-bottom: 1.1px;
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover img {
+    transform: scale(1.5); /* Aumenta el tamaño al 120% */
+}
+
+.menu-item-label {
+    font-size: 9px;
+    margin-top: 3px;
+    font-weight:500; /* Aumenta el grosor de la fuente */
+    font-family: sans-serif
+
+}
+
+
+
+
+/* Estilos para la barra de navegación desplegable */
+
+
+
+
+
+.opciones-desplegable {
+    display: none;
+    position: absolute;
+    min-width: 0px;
+    z-index: 1000;
+    border-radius: 20%; /* Forma circular */
+    padding: 0px;
+    transform: translateY(-200%); /* Mueve el menú hacia arriba */
+    transition: transform 0.3s ease; /* Agrega transición para la transformación */
+}
+
+.menu-item.opciones.clicked .opciones-desplegable {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+    background-color: rgba(0, 0, 0, 0.0);;
+    transform: translateY(-135%) scale(1.1); /* Mueve hacia arriba y aumenta el tamaño al hacer clic */
+}
+
+.opciones-desplegable a {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Agrega transición para transformar */
+    border-radius: 50%; /* Padding circular */
+    margin: 5px; /* Separación entre los botones */
+}
+
+.opciones-desplegable a:hover {
+    background-color: hotpink; /* Cambia el color de fondo al hacer hover */
+    transform: scale(1.1); /* Aumenta el tamaño al hacer hover */
+}
+
+/* Fondo azul para el icono de la luna */
+.opciones-desplegable a:nth-child(1) {
+    background-color: blue !important; /* Color azul para la luna */
+    transition: background-color 0.3s ease; /* Transición de color */
+}
+
+
+/* Fondo amarillo para el icono del sol */
+.opciones-desplegable a:nth-child(2) {
+    background-color: yellow; /* Color amarillo para el sol */
+    transition: background-color 0.3s ease; /* Transición de color */
+}
+
+/* Cambio de color a verde en modo nocturno para iconos y letras */
+.modo-nocturno .menu-item img,
+.modo-nocturno .menu-item-label {
+    color: #111; /* Color verde para los iconos y letras */
+}
+
+/* Agrega estilos específicos para el modo nocturno */
+.modo-nocturno {
+    background-color: black!important;
+    color: red !important;
+}
+
+.modo-nocturno .menu {
+    background-color: green !important;
+}
+
+.modo-nocturno .menu-item:hover {
+    background-color: rgba(0, 90, 0, 0.5) !important; /* Verde semi-transparente al hacer hover */
+}
+
+
+.modo-nocturno .menu-item img {
+    filter: invert(1);
+}
+
+.modo-nocturno .opciones-desplegable {
+    background-color: rgba(0, 128, 0, 0) !important; /* Fondo verde transparente en modo nocturno */
+}
+
+.modo-nocturno .opciones-desplegable a:hover {
+    background-color: white;
+}
+
+
+
+
+
+

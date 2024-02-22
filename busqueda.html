@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/busqueda.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="menu-container"></div> <!-- Contenedor del menú -->
+
+    <nav class="menu" id="menu">
+        <a href="index.html" class="menu-item" onclick="cargarPaginaInicial(); return false;">
+            <img src="icon/home.png" alt="Icono Inicio">
+            <span class="menu-item-label">Inicio</span>
+        </a>
+        <a href="Apps.html" class="menu-item" onclick="cargarPagina('Apps.html'); return false;">
+            <img src="icon/android.png" alt="Icono Pregunta y Respuesta">
+            <span class="menu-item-label">Apps</span>
+        </a>
+        <a href="busqueda.html" class="menu-item" onclick="cargarPagina('busqueda.html'); return false;">
+            <img src="icon/mas.png" alt="Icono Galería">
+            <span class="menu-item-label">Mas</span>
+        </a>
+        <a href="busqueda.html" class="menu-item" onclick="cargarPagina('busqueda.html'); return false;">
+            <img src="icon/user.png" alt="Icono busqueda">
+            <span class="menu-item-label">Persona</span>
+        </a>
+        <div class="menu-item opciones" onclick="toggleOpcionesDesplegable(this);">
+            <img src="icon/ajustes.png" alt="ajustes">
+            <span class="menu-item-label">Opciones</span>
+            <div class="opciones-desplegable" id="opciones-desplegable">
+                <a href="#" class="modo-nocturno" onclick="activarModoNocturno(); return false;"><img src="icon/luna.png" alt="Icono 1"></a>
+                <a href="#" class="modo-dia" onclick="activarModoDia(); return false;"><img src="icon/sol.png" alt="Icono 2"></a>
+            </div>
+        </div>
+    </nav>
+    
+    <h1> por el momento esta en desarrllo</h1>
+
+    
+
+
+
+     
+	<script>  
+		 function toggleOpcionesDesplegable(element) {
+            element.classList.toggle('clicked');
+            var opcionesDesplegable = element.querySelector('.opciones-desplegable');
+            opcionesDesplegable.style.display = opcionesDesplegable.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function activarModoNocturno() {
+            document.body.classList.add('modo-nocturno');
+        }
+
+        function activarModoDia() {
+            document.body.classList.remove('modo-nocturno');
+        }
+	</script>
+</body>
+</html>

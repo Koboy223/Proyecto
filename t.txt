@@ -1,0 +1,82 @@
+ function toggleOpcionesDesplegable(element) {
+            element.classList.toggle('clicked');
+            var opcionesDesplegable = element.querySelector('.opciones-desplegable');
+            opcionesDesplegable.style.display = opcionesDesplegable.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function activarModoNocturno() {
+            document.body.classList.add('modo-nocturno');
+        }
+
+        function activarModoDia() {
+            document.body.classList.remove('modo-nocturno');
+        }
+		
+		
+		
+		cssss
+		 body {
+        margin: 0;
+	 font-family: Arial, sans-serif;
+}
+
+ }
+    .header {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        z-index: 1000;
+    }
+    .logo {
+        position: relative;
+        overflow: hidden;
+		background-color: black;
+    }
+    .big-image {
+        width: 100px;
+        height: 100px;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    .small-image {
+        width: 25px;
+        height: 25px;
+        z-index: 1;
+		right: 34px;
+		position:relative;
+		top: -15px;
+}
+
+.text {
+
+ 
+
+}
+
+
+
+
+
+}
+
+
+sicripts
+function toggleOpcionesDesplegable(element) {
+    element.classList.toggle('clicked');
+    var opcionesDesplegable = element.querySelector('.opciones-desplegable');
+    opcionesDesplegable.style.display = opcionesDesplegable.style.display === 'block' ? 'none' : 'block';
+}
+
+function activarModoNocturno() {
+    document.body.classList.add('modo-nocturno');
+}
+
+function activarModoDia() {
+    document.body.classList.remove('modo-nocturno');
+}
